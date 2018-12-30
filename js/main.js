@@ -108,8 +108,8 @@ $(".btn").click(function () {
   // END - GRAND TOTAL
 
 
-  // Append receipt object to receipt table
-
+  // Makes sure that the receipt updates each time a new order is placed, instead of appending
+  $('.table').find('tbody:last').html('');
   for (key in receipt) {
     var item = '<th class="item">' + key + '</th>'
     var price = '<th class="item">' + receipt[key] + '</th>'
